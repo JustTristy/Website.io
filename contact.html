@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Maruf</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <main id="contact">
+        <section class="contact-form">
+            <h2>Contact Me</h2>
+            <form id="contactForm" action="https://httpbin.org/post" method="POST" novalidate>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city">City:</label>
+                <input list="cities" id="city" name="city" required>
+                <datalist id="cities">
+                    <option value="Toronto">
+                    <option value="Vancouver">
+                    <option value="Montreal">
+                    <option value="Calgary">
+                    <option value="Ottawa">
+                </datalist>
+
+                <label for="postal-code">Postal Code:</label>
+                <input type="text" id="postal-code" name="postalCode" pattern="^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$" required>
+
+                <div>
+                    <p>What is this about?</p>
+                    <label><input type="radio" name="purpose" value="Question" required> Question</label>
+                    <label><input type="radio" name="purpose" value="Comment" required> Comment</label>
+                    <label><input type="radio" name="purpose" value="Hiring" required> Hiring</label>
+                </div>
+               
+                <div id="rate" class="hidden">
+                    <label for="hourly-rate">Hourly Rate:</label>
+                    <input type="number" id="hourly-rate" name="hourlyRate" min="0" step="0.01">
+                </div>
+               
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <label for="newsletter">Subscribe to Newsletter:</label>
+                <input type="checkbox" id="newsletter" name="newsletter">
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+    <a href="index.html">Go Back</a>
+</body>
+</html>
